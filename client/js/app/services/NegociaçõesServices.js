@@ -27,7 +27,7 @@ import { Negociação } from "../models/Negociação.js"
 
       return new Promise( (response, reject) => {
         this.#http
-        .get('http://localhost:300negociacoes/semana')
+        .get('http://localhost:3000/negociacoes/semana')
         .then(res => response(res))
         .catch( () => reject('Não foi possível importa as negociações dessa semana.'))}
         )
@@ -37,7 +37,7 @@ import { Negociação } from "../models/Negociação.js"
          
         return new Promise( (response, reject) => {
         this.#http
-        .get('http://localhost:300negociacoes/anterior')
+        .get('http://localhost:3000/negociacoes/anterior')
         .then(res => response(res))
         .catch( () => reject('Não foi possível importa as negociações da semana anterior.'))}
         )
@@ -47,7 +47,7 @@ import { Negociação } from "../models/Negociação.js"
 
         return new Promise( (response, reject) => {
             this.#http
-            .get('http://localhost:300negociacoes/retrasada')
+            .get('http://localhost:3000/negociacoes/retrasada')
             .then(res => response(res))
             .catch( () => reject('Não foi possível importa as negociações da semana retrasada'))}
             )
